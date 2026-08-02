@@ -1,0 +1,531 @@
+/* ===========================
+   PREMIUM BIRTHDAY WEBSITE
+   style.css - Part 1
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(-45deg,#ff4e9b,#7b2ff7,#4facfe,#00f2fe);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
+color:#fff;
+overflow-x:hidden;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Floating Stars */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+left:0;
+top:0;
+pointer-events:none;
+background-image:
+radial-gradient(white 1px, transparent 1px),
+radial-gradient(white 2px, transparent 2px);
+background-size:120px 120px;
+opacity:.25;
+animation:starsMove 60s linear infinite;
+z-index:-3;
+}
+
+@keyframes starsMove{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-300px);
+}
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+text-align:center;
+}
+
+.glass-card{
+
+width:100%;
+max-width:450px;
+
+padding:40px;
+
+background:rgba(255,255,255,.12);
+
+border:1px solid rgba(255,255,255,.3);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.3);
+
+animation:cardFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes cardFloat{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+}
+
+.glass-card h2{
+
+font-size:28px;
+margin-bottom:15px;
+
+}
+
+.glass-card h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:70px;
+
+color:#fff;
+
+text-shadow:0 0 25px #ff99dd;
+
+margin-bottom:15px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+line-height:1.7;
+
+opacity:.95;
+
+margin-bottom:30px;
+
+}
+
+button{
+
+padding:14px 35px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+background:#fff;
+
+color:#ff2f80;
+
+transition:.35s;
+
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+}
+
+button:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+background:#ffe600;
+
+}
+
+/* Sections */
+
+section{
+
+padding:80px 20px;
+
+text-align:center;
+
+}
+
+section h2{
+
+font-size:38px;
+
+margin-bottom:30px;
+
+text-shadow:0 0 15px rgba(255,255,255,.6);
+
+}
+
+#countdown{
+
+font-size:28px;
+
+font-weight:bold;
+
+background:rgba(255,255,255,.15);
+
+display:inline-block;
+
+padding:20px 35px;
+
+border-radius:20px;
+
+backdrop-filter:blur(12px);
+
+}
+
+/* Love Letter */
+
+#love{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+#typing{
+
+white-space:pre-line;
+
+font-size:22px;
+
+line-height:1.8;
+
+padding:30px;
+
+background:rgba(255,255,255,.12);
+
+border-radius:20px;
+
+backdrop-filter:blur(15px);
+
+}
+
+/* Music */
+
+.music{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+z-index:999;
+
+}
+
+/* Fireworks Canvas */
+
+#fireworks{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.glass-card{
+
+padding:25px;
+
+}
+
+.glass-card h1{
+
+font-size:48px;
+
+}
+
+.glass-card h2{
+
+font-size:22px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+}
+
+section h2{
+
+font-size:30px;
+
+}
+
+#countdown{
+
+font-size:20px;
+
+padding:15px 20px;
+
+}
+
+#typing{
+
+font-size:18px;
+
+}
+
+button{
+
+font-size:16px;
+
+padding:12px 28px;
+
+}
+
+}
+/* ==========================================
+   3D BIRTHDAY CAKE
+========================================== */
+
+#cakeSection{
+padding:100px 20px;
+}
+
+.cake{
+position:relative;
+width:260px;
+height:220px;
+margin:50px auto;
+}
+
+.layer{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+border-radius:18px;
+box-shadow:
+0 10px 20px rgba(0,0,0,.25),
+inset 0 3px 6px rgba(255,255,255,.5);
+}
+
+.bottom{
+width:250px;
+height:80px;
+bottom:0;
+background:linear-gradient(#ffb6c1,#ff69b4);
+}
+
+.middle{
+width:210px;
+height:70px;
+bottom:70px;
+background:linear-gradient(#fff0f5,#ffb6c1);
+}
+
+.top{
+width:170px;
+height:60px;
+bottom:130px;
+background:linear-gradient(#ffffff,#ffe4e1);
+}
+
+/* Cream */
+
+.top::before,
+.middle::before,
+.bottom::before{
+content:"";
+position:absolute;
+top:-8px;
+left:0;
+width:100%;
+height:18px;
+background:
+radial-gradient(circle,#fff 30%,transparent 31%) repeat-x;
+background-size:24px 18px;
+}
+
+/* Candles */
+
+.candles{
+position:absolute;
+bottom:185px;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:20px;
+}
+
+.candle{
+width:12px;
+height:45px;
+background:
+repeating-linear-gradient(
+45deg,
+#ff4d4d,
+#ff4d4d 5px,
+#ffffff 5px,
+#ffffff 10px
+);
+border-radius:4px;
+position:relative;
+}
+
+.flame{
+position:absolute;
+top:-16px;
+left:50%;
+transform:translateX(-50%);
+width:14px;
+height:20px;
+background:linear-gradient(yellow,orange,red);
+border-radius:50% 50% 50% 50%;
+animation:flicker .2s infinite alternate;
+box-shadow:0 0 18px orange;
+}
+
+@keyframes flicker{
+
+0%{
+transform:translateX(-50%) scale(1);
+}
+
+100%{
+transform:translateX(-50%) scale(.8);
+}
+
+}
+
+/* ==========================================
+   GIFT BOX
+========================================== */
+
+.gift-box{
+position:relative;
+width:170px;
+height:170px;
+margin:50px auto;
+cursor:pointer;
+transition:.6s;
+}
+
+.box{
+position:absolute;
+bottom:0;
+width:170px;
+height:120px;
+background:#ff3c8d;
+border-radius:8px;
+}
+
+.box::before{
+content:"";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+width:24px;
+height:120px;
+background:#ffd700;
+}
+
+.lid{
+position:absolute;
+top:18px;
+width:180px;
+height:38px;
+left:-5px;
+background:#ff5ca8;
+border-radius:8px;
+transition:.8s;
+transform-origin:left;
+}
+
+.lid::before{
+content:"";
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+width:24px;
+height:38px;
+background:#ffd700;
+}
+
+.gift-box:hover{
+transform:scale(1.05);
+}
+
+.gift-box.open .lid{
+transform:
+rotate(-35deg)
+translateY(-25px);
+}
+
+#surprise{
+display:none;
+margin-top:30px;
+font-size:30px;
+font-weight:bold;
+animation:pop .8s ease;
+text-shadow:0 0 20px #fff;
+}
+
+@keyframes pop{
+
+0%{
+transform:scale(.2);
+opacity:0;
+}
+
+100%{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+#blowBtn,
+#giftBtn{
+margin-top:30px;
+}
